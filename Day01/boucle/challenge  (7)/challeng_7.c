@@ -19,7 +19,7 @@ int main() {
         count++;
     }
 
-    printf("%d\n", count);
+
     
     int n=1, single_nbr;
 
