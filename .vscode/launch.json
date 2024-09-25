@@ -58,8 +58,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Youcode/Desktop/Youcode SaS/workshop-c-language/workshop-c-language/Day01/Variables/challenge  (13)",
-      "program": "c:/Users/Youcode/Desktop/Youcode SaS/workshop-c-language/workshop-c-language/Day01/Variables/challenge  (13)/build/Debug/outDebug",
+      "cwd": "c:/Users/Youcode/Desktop/Youcode SaS/workshop-c-language/workshop-c-language/Day01/Conditions/ConditionsL2/challenge  (2)",
+      "program": "c:/Users/Youcode/Desktop/Youcode SaS/workshop-c-language/workshop-c-language/Day01/Conditions/ConditionsL2/challenge  (2)/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
