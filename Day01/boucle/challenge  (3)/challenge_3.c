@@ -18,7 +18,7 @@ int main(){
     for ( i = 1 ; i <= nbr ; i++)
     {
         
-        n =+ i;
+        n += i;
 
     }
     
