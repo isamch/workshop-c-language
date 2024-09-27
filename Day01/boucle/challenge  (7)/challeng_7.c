@@ -29,7 +29,7 @@ int main() {
         
         single_nbr = (nbr / n)%10;
 
-        printf("%d", single_nbr);
+        // printf("%d", single_nbr);
 
         swap = swap + single_nbr * (int)pow(10, pow_);
         n = n * 10;
@@ -38,7 +38,7 @@ int main() {
     
         pow_ --;
     }
-    printf("______\n");
+    printf("\n______\n");
     
     printf(" inverse number : %d\n", swap);
 
