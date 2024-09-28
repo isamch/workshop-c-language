@@ -58,8 +58,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Youcode/Desktop/Youcode SaS/workshop-c-language/workshop-c-language/Day03/String/challenge (10)",
-      "program": "c:/Users/Youcode/Desktop/Youcode SaS/workshop-c-language/workshop-c-language/Day03/String/challenge (10)/build/Debug/outDebug",
+      "cwd": "c:/Users/Youcode/Desktop/Youcode SaS/workshop-c-language/workshop-c-language/Day03/Structures/challenge (5)",
+      "program": "c:/Users/Youcode/Desktop/Youcode SaS/workshop-c-language/workshop-c-language/Day03/Structures/challenge (5)/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

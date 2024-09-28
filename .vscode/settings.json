@@ -63,5 +63,6 @@
     "math.h": "c",
     "functional": "c",
     "algorithm": "c"
-  }
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }
