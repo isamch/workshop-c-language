@@ -120,7 +120,7 @@ void search_book(){
 
     for ( i = 0; i < book_count; i++)
     {
-        if ( strcmp(search, titre[i]) == 0)
+        if ( strcasecmp(search, titre[i]) == 0)
         {
             found_book = true;
             break;
@@ -155,7 +155,7 @@ void update_quantities(){
 
     for ( i = 0; i < book_count; i++)
     {
-        if ( strcmp(search_uq, titre[i]) == 0)
+        if ( strcasecmp(search_uq, titre[i]) == 0)
         {
             found_book = true;
             break;
@@ -198,7 +198,7 @@ void delet_book(){
 
     for ( i = 0; i < book_count; i++)
     {
-        if ( strcmp(search_del, titre[i]) == 0)
+        if ( strcasecmp(search_del, titre[i]) == 0)
         {
             found_book = true;
 

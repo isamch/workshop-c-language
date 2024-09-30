@@ -24,9 +24,9 @@ int main(){
 
 
     //  traitement & affichage :
-    for ( i = 1; i < n; i++)
+    for ( i = 1; i < n - 1; i++)
     {
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < n - 1; j++)
         {
             if (arr[j] > arr[j+1])
             {

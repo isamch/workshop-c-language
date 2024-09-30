@@ -8,7 +8,6 @@
 
 contacts contact[max_contact];
 
-extern int count_contact;
 
 
 
@@ -19,11 +18,9 @@ int main()
 
 
 
-
-
     do
     {
-        
+
         printf("\033[1;32m"
             "        .--.       \n"
             "       |o_o |      \n"
@@ -53,7 +50,6 @@ int main()
         }
         
         
-
         switch (choice)
         {
         case 1:
@@ -83,7 +79,18 @@ int main()
             break;
         case 6:
             printf(COLOR_RED"\n--------------\n");
-            printf(COLOR_BLUE"Merci Pour Utiliser Votre Programme.\n");
+            printf("\033[1;32m"
+            "        .--.       \n"
+            "       |o_o |      \n"
+            "       |:_/ |      \n"
+            "      //   \\ \\     \n"
+            "     (|     | )    \n"
+            "    /'\\_   _/`\\   \n"
+            "    \\___)=(___/    \n"
+            "                  \n"
+            "                  \n"
+            "\033[0m");
+            printf(COLOR_BLUE"\nMerci Pour Utiliser Votre Programme.\n");
             printf(COLOR_RED"\n--------------\n"COLOR_RESET);
             break;
         }

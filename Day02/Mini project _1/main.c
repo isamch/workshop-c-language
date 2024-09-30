@@ -7,12 +7,6 @@
 #include "function.h"
 
 
-// data :
-extern char titre[MAX_BOOKS][50];
-extern char autor[MAX_BOOKS][50];
-extern float prix[MAX_BOOKS];
-extern int quantities[MAX_BOOKS];
-extern int book_count;
 
 
 

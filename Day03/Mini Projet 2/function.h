@@ -32,6 +32,7 @@ typedef struct
 // global struct:
 extern contacts contact[max_contact];
 
+extern int count_contact;
 
 
 
@@ -44,6 +45,7 @@ void Supprimer_Contact();
 void affichage_contact();
 void search_contact();
 void enter_continue();
+void sorting_contact();
 
 
 
