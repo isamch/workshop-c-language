@@ -76,6 +76,7 @@ void ajouter_contact()
 
             count_contact++;
         }
+        
         sorting_contact();
     }
 }
@@ -338,6 +339,7 @@ contact_nexist_search:
         printf(COLOR_RED "\n----------\n" COLOR_RESET);
     }
 }
+
 
 // press enter to continue :
 void enter_continue()
