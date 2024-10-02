@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <windows.h>
 
 #include "function.h"
 
@@ -9,14 +10,14 @@ int count_contact = 0;
 // Affichage Menu:
 void show_menu()
 {
-    printf(COLOR_RED "\n========== MENU ============\n");
-    printf(COLOR_GREEN "  1. Ajouter un Contact.\n");
-    printf("  2. Modifier un Contact.\n");
-    printf("  3. Supprimer un Contact.\n");
-    printf("  4. Afficher Tous les Contacts.\n");
-    printf("  5. Rechercher un Contact.\n");
-    printf("  6. Exit.\n" COLOR_RESET);
-    printf(COLOR_RED "\n============================\n" COLOR_RESET);
+    printf(COLOR_RED "\n============= MENU ===============\n");
+    printf(COLOR_GREEN "  > 1. Ajouter un Contact.\n");
+    printf("  > 2. Modifier un Contact.\n");
+    printf("  > 3. Supprimer un Contact.\n");
+    printf("  > 4. Afficher Tous les Contacts.\n");
+    printf("  > 5. Rechercher un Contact.\n");
+    printf("  > 6. Exit.\n" COLOR_RESET);
+    printf(COLOR_RED "\n===================================\n" COLOR_RESET);
 }
 
 // 1. Ajouter un Contact :
@@ -29,7 +30,9 @@ void ajouter_contact()
         return;
     }
 
-    printf(COLOR_GREEN "Combien de contacts souhaitez-vous ajouter? (Entrez 0 pour retour): ");
+    printf(COLOR_GREEN "Combien de contacts souhaitez-vous ajouter? ");
+    printf(COLOR_RED "(Entrez 0 pour retour): " COLOR_RESET);
+
     scanf("%d", &nbr_add_shot);
 
     if (nbr_add_shot == 0)
@@ -74,7 +77,6 @@ void ajouter_contact()
             count_contact++;
         }
         sorting_contact();
-
     }
 }
 
@@ -93,14 +95,16 @@ void Modifier_Contact()
 
 contact_nexist_pas:
     getchar();
-    printf(COLOR_GREEN "Entrez le nom du numero que vous souhaitez modifier (Entrez x pour retour) : ");
+    printf(COLOR_GREEN "Entrez le nom du numero que vous souhaitez modifier ");
+    printf(COLOR_RED "(Entrez x pour retour): " COLOR_RESET);
+
     scanf("%[^\n]", search_name);
 
     if (strcasecmp(search_name, "x") == 0)
     {
         return;
     }
-    
+
     // search :
     for (i = 0; i < count_contact; i++)
     {
@@ -137,6 +141,7 @@ contact_nexist_pas:
         printf(COLOR_RED "\n=================\n" COLOR_RESET);
 
         printf(COLOR_GREEN "Entrez Votre Choix : ");
+
         scanf("%d", &choice_menu_modify);
 
         switch (choice_menu_modify)
@@ -185,7 +190,9 @@ void Supprimer_Contact()
 
 contact_nexist_sup:
     getchar();
-    printf(COLOR_GREEN "Entrez le nom du numero que vous souhaitez supprimer (Entrez x pour retour): ");
+    printf(COLOR_GREEN "Entrez le nom du numero que vous souhaitez supprimer ");
+    printf(COLOR_RED "(Entrez x pour retour): " COLOR_RESET);
+
     scanf("%[^\n]", search_name);
 
     if (strcasecmp(search_name, "x") == 0)
@@ -264,8 +271,7 @@ void affichage_contact()
         return;
     }
 
-
-    printf(COLOR_RED "\n======================= Liste des contact ========================\n");
+    printf(COLOR_RED "\n========================= Liste des contact ==========================\n");
 
     printf(COLOR_RED "\n+-------------------+--------------------+----------------------------+\n");
     printf(COLOR_GREEN "| Nom               | Numero             | Email                      |");
@@ -282,20 +288,29 @@ void affichage_contact()
 // 5. Rechercher un Contact :
 void search_contact()
 {
+    // contact vide :
+    if (count_contact == 0)
+    {
+        printf(COLOR_RED "La liste de contacts est vide.\n" COLOR_RESET);
+        return;
+    }
+
 
     int i, found = 0;
     char search_name[max_char];
 
 contact_nexist_search:
     getchar();
-    printf(COLOR_GREEN "Entrez le nom du numero que vous recherchez (Entrez X pour retour): ");
+    printf(COLOR_GREEN "Entrez le nom du numero que vous recherchez ");
+    printf(COLOR_RED "(Entrez x pour retour): " COLOR_RESET);
+
     scanf("%[^\n]", search_name);
 
     if (strcasecmp(search_name, "x") == 0)
     {
         return;
     }
-    
+
     // search :
     for (i = 0; i < count_contact; i++)
     {
@@ -332,8 +347,8 @@ void enter_continue()
     getchar();
 }
 
-// fonction de tri :
 
+// fonction de tri :
 void sorting_contact()
 {
 
